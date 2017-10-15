@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    apt_packages_install:
+      - cowsay
+    apt_packages_uninstall:
+      - vim
+  roles:
+    - role: ansible-role-apt

@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Mark Hesketh
+  description: Install and uninstall packages via Apt on Debian-based systems.
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+  categories:
+    - system
+    - apt
+    - packages
+    - debian
+    - ubuntu
+
+dependencies: []
