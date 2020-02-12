@@ -6,20 +6,26 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: instance
+  - name: deb8
     image: debian:8
     privileged: yes
-  - name: instance
+  - name: deb9
     image: debian:9
     privileged: yes
-  - name: instance
+  - name: deb10
+    image: debian:10
+    privileged: yes
+  - name: ubu12
     image: ubuntu:12.04
     privileged: yes
-  - name: instance
+  - name: ubu14
     image: ubuntu:14.04
     privileged: yes
-  - name: instance
+  - name: ubu16
     image: ubuntu:16.04
+    privileged: yes
+  - name: ubu18
+    image: ubuntu:18.04
     privileged: yes
 provisioner:
   name: ansible
