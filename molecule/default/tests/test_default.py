@@ -10,6 +10,5 @@ def test_cowsay_is_installed(host):
     cowsay = host.package("cowsay")
     assert cowsay.is_installed
 
-
 def test_vim_is_uninstalled(host):
     assert host.ansible("apt", "name=vim state=present")["changed"]

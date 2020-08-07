@@ -1,14 +1,22 @@
 ---
-sudo: required
 language: python
-services:
-  - docker
-before_install:
-  - sudo apt-get -qq update
+services: docker
+
+env:
+  matrix:
+    - MOLECULE_DISTRO: debian8
+    - MOLECULE_DISTRO: debian9
+    - MOLECULE_DISTRO: debian10
+    - MOLECULE_DISTRO: ubuntu1604
+    - MOLECULE_DISTRO: ubuntu1804
+
 install:
-  - pip install molecule
-  - pip install docker
+  # Install test dependencies.
+  - pip install molecule docker
+
 script:
+  # Run tests.
   - molecule test
+
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

@@ -1,10 +1,19 @@
 ---
 - name: Converge
   hosts: all
-  vars:
-    apt_packages_install:
-      - cowsay
-    apt_packages_uninstall:
-      - vim
+
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
   roles:
     - role: ansible-role-apt
+
+  vars:
+    - apt_packages_install:
+        - "vim"
+        - "tree"
+        - "cowsay"
+    - apt_packages_uninstall:
+        - "vim"

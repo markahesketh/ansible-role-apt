@@ -25,6 +25,9 @@ The `apt_packages_install` and `apt_packages_uninstall` variables take an array 
 apt_packages_install:
   - vim
   - htop
+  - tree
+
+apt_packages_install:
   - cowsay
 ```
 
@@ -53,8 +56,3 @@ This role is open-sourced software licensed under the [MIT license](http://opens
 ## Author
 
 By [Mark Hesketh](https://www.markhesketh.co.uk/), a web developer from Manchester, UK.
-
-* Blog: [markhesketh.co.uk](https://www.markhesketh.co.uk/)
-* Twitter: [twitter.com/markahesketh](https://www.twitter.com/markahesketh/)
-* GitHub: [github.com/markahesketh](http://www.github.com/heskethm/)
-* Email: [contact@markhesketh.co.uk](mailto:contact@markhesketh.co.uk)

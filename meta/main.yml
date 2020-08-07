@@ -3,14 +3,17 @@ galaxy_info:
   author: Mark Hesketh
   description: Install and uninstall packages via Apt on Debian-based systems.
   license: MIT
-  min_ansible_version: 1.8
+  min_ansible_version: 2.9
   platforms:
     - name: Debian
       versions:
-        - all
+        - jessie
+        - stretch
+        - buster
     - name: Ubuntu
       versions:
-        - all
+        - xenial
+        - bionic
   galaxy_tags:
     - system
     - apt
